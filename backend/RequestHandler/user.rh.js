@@ -60,3 +60,18 @@ export async function loginUser(req,res) {
 res.status(500).send({ msg: "Login failed", error: error.message });
     }
 }
+
+export async function dashBoard(req,res){
+    try{
+        console.log("end point");
+        console.log(req.user);
+        const _id=req.user.userID;
+        console.log(_id);
+        
+        const user=await User.findOne({_id});
+        res.status(200).send({_id:_id, name:user.name, email:user.email});  
+    }catch(error){
+        console.error("Dashboard access failed:", error.message);
+        res.status(400).send({error})
+    }
+}

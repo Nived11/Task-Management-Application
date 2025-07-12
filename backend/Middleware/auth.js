@@ -7,12 +7,12 @@ export default async function Auth(req, res, next) {
         if(!key)
             return res.status(403).send({msg:"Unauthorized access"})
         const token =key.split(" ")[1]
-        const auth =await verify(token,process.env.JWT_KEY);
+        const auth =await verify(token,process.env.JWT_SECRET);
         
         req.user={userID:auth.userID}
         next()
     } catch (error) {
-        return res.status(403).send({msg:"Login time expired please login again"})
+        return res.status(403).send({msg:"session expired please login again"})
     }
 }
 
