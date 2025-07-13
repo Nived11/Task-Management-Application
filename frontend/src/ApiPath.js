@@ -1,5 +1,5 @@
 export default function apiPath(){
-    return(
-        "https://listify-ji8v.onrender.com/api"
-    )
+    
+     return import.meta.env.VITE_API_BASE_URL;
+    
 }
