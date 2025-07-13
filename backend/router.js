@@ -14,5 +14,6 @@ router.route("/addtask").post(Auth, tasks.addTask)
 router.route("/displaytask/:id").get(Auth, tasks.displayTask)
 router.route("/updatetask/:userId/:taskId").put(Auth, tasks.updateTask)
 router.route("/deletetask/:userId/:taskId").delete(Auth, tasks.DeleteTask)
+router.route("/taskcompleted/:taskId").put(Auth, tasks.taskCompleted)
 
 export default router

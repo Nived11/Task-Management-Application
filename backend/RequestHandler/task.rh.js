@@ -62,3 +62,26 @@ export const updateTask = async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 };
+
+
+export const taskCompleted = async (req, res) => {
+  try {
+    const { taskId } = req.params;
+    const { completed } = req.body;
+
+    const task = await Task.findByIdAndUpdate(
+      taskId,
+      { completed },
+      { new: true }
+    );
+
+    if (!task) {
+      return res.status(404).json({ msg: "Task not found" });
+    }
+
+    res.status(200).json({ msg: "Task completed", task });
+  } catch (error) {
+    console.error("Error toggling complete:", error.message);
+    res.status(500).json({ msg: "Server error" });
+  }
+};
