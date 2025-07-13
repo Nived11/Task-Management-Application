@@ -63,10 +63,10 @@ export default function Login() {
             </div>
           </div>
           <div className="nav-right">
-            <Link to="/about" className="nav-link">
+            <Link to="#" className="nav-link">
               About us
             </Link>
-            <Link to="/contacts" className="nav-link">
+            <Link to="#" className="nav-link">
               Contacts
             </Link>
           </div>

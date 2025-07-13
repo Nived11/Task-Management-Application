@@ -14,7 +14,7 @@ export const addTask = async (req, res) => {
 
 export const displayTask = async (req, res) => {
   try {
-    const { id } = req.params; // userId from URL
+    const { id } = req.params; 
     const tasks = await Task.find({ userId: id }).sort({ createdAt: -1 }); // latest first
     res.status(200).json(tasks);
   } catch (error) {
