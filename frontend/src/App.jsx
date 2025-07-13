@@ -16,9 +16,12 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="*" element={
         <>
-        <h1>404 Not Found</h1>
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190406.png" alt="404" style={{ width: '150px', height: '150px' }} />
+        <h1 >404 Not Found</h1>
         <p>The page you are looking for does not exist.</p>
         <p>Please check the URL or return to the <a href="/dashboard">home page</a>.</p>
+        </div>
         </>} />
     </Routes>
    </BrowserRouter>
