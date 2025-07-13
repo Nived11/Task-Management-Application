@@ -1,5 +1,5 @@
 export default function apiPath(){
     return(
-        "http://localhost:4000/api"
+        "https://listify-ji8v.onrender.com/api"
     )
 }
