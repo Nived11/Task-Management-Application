@@ -1,4 +1,4 @@
-# 📝 Task Management Dashboard
+# 📝 Task Management Application
 
 A full-stack Task Manager application built with **React**, **Node.js**, **Express**, and **MongoDB**. Users can register, log in, and manage personal tasks with the ability to add, update, delete, and search.
 
