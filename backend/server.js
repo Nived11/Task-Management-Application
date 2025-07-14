@@ -14,6 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use("/api", router); 
 
+app.get("/", (req, res) => {
+  res.send("Listify backend is alive!");
+});
+
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, async () => {
